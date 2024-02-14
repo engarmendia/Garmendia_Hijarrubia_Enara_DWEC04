@@ -1,0 +1,389 @@
+/* Estilos generales */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+}
+h1 {
+    font-family: 'Dosis', sans-serif;
+    text-align: center;
+    text-shadow: 2px 2px 4px yellowgreen;
+    font-size: 30pt;
+}
+h2 {
+    font-family: 'Dosis', sans-serif;
+    text-align: center;
+    font-size: 25pt;
+    font-weight: 600;
+}
+
+/* Estilos de cabecera */
+#cab {
+    width: 100%;
+    height: 220px;
+    background: url(../img/kontzertu2.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+/* Estilos de botones para ir a ver los eventos de hoy y volver a la página principal */
+#goToToday, #volverYCerrar {
+    background:linear-gradient(to left, yellowgreen, rgb(77, 104, 25));
+    padding: 1%;
+    border: none;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.7);
+    font-family: 'Dosis', sans-serif;
+    font-size: 15pt;
+    padding-left: 3%;
+
+    /* Agregar una transición suave*/
+    -moz-transition: transform 0.7s;
+    -ms-transition: transform 0.7s;
+    -o-transition: transform 0.7s;
+    -webkit-transition: transform 0.7s;
+    transition: transform 0.7s;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;  
+}
+#goToToday:hover , #volverYCerrar:hover {
+    
+    /* Escalar horizontalmente cuando se pasa el cursor por encima */
+    transform-origin: left;
+    -webkit-transform: scaleX(1.1);
+    -moz-transform: scaleX(1.1);
+    -ms-transform: scaleX(1.1);
+    -o-transform: scaleX(1.1);
+    transform: scaleX(1.1);
+}
+
+/* Estilos para el texto de cargando contenido */
+.loading {
+    font-weight: 600;
+    color: white;
+    margin-left: 4%;
+}
+
+/* Estilos del navegador y sus elementos (img, botones, input...) */
+nav {
+    background: #121212;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2% 0;
+}
+#mapa {
+    width: 60px;
+    margin-left: 1%;
+}
+#controles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+#pageStatus {
+    background-color: aliceblue;
+    padding: 1%;
+    border: solid 5px yellowgreen;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    border-radius: 100px;
+    font-size: 15pt;
+    font-weight: 600;
+    margin-bottom: 0.5%;
+}
+#previousPage, #nextPage {
+    width: 13%;
+    padding: 1%;
+    margin: 1.5%;
+    cursor: pointer;
+    margin-bottom: 3%;
+}
+#nextArrow, #previousArrow {
+    width: 100%;
+}
+#goToPageInput {
+    border: solid 3px yellowgreen;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    width: 3%;
+    height: 20px;
+    margin-bottom: 1%;
+}
+#goToPageButton {
+    background: yellowgreen;
+    cursor: pointer;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border-radius: 15px;
+    padding: 0.5% 1%;
+    border: solid 5px rgb(125, 168, 39)reen;
+    font-weight: 600;
+}
+#goToPageButton:hover {
+    background: rgb(125, 168, 39);
+}
+
+/* Estilos para el contenedor principal */
+#data-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Estilos para los id de color de provincia */
+#idColorRed {
+    background-color: red;
+    padding: 1.5% 0.3%;
+    text-align: center;
+}
+#idColorGreen {
+    background-color: green;
+    padding: 1.5% 0.2%;
+    text-align: center;
+}
+#idColorBlue {
+    background-color: blue;
+    padding: 1.5% 0.3%;
+    text-align: center;
+}
+#idColorPurple {
+    background-color: purple;
+    padding: 1.5% 0.25%;
+    text-align: center;
+}
+#idColorOrange {
+    background-color: orange;
+    padding: 1.5% 0.55%;
+    text-align: center;
+}
+#idColorNone {
+    background-color: transparent;
+    padding: 1.5% 0.3%;
+    text-align: center;
+}
+
+/* Estilos para el nombre del concierto que se mostrará en diferente color a partir de fecha actual */
+.elmtListaNombre {
+    width: 33%;
+    padding: 1% 0 1% 0.5%;
+    color: rgb(189, 239, 71);
+}
+.elmtListaNombreAntiguo {
+    width: 33%;
+    padding: 1% 0 1% 0.5%;
+    color: gray;
+}
+
+/* Estilos para la lupa */
+.elementoinfo {
+    text-align: center;
+    padding: 1% 0;
+    margin: 0 0.5%;
+    cursor: pointer;
+    width: 4%;
+
+    /*EstableceLaTransiciónDeTransformación*/
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
+}
+
+/* Aumentará de tamaño al pasar el ratón por encima */
+.elementoinfo:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+/* Estilos para el resto de elementos de la lista (fecha, hora y municipio) */
+.elmtLista {
+    margin-bottom: 10px;
+    padding: 1% 0;
+    width: 20%;
+    text-align: center;
+    color: white;
+}
+
+/* Estilos del div que se abre al pulsar la lupa y de los diferentes elementos que se muestran dentro del div */
+.divInfo {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.imgEvento {
+    width: 40%;
+    border: solid 4px black;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
+    margin: 2% 0;
+}
+.pregunta {
+    font-size: 30px;
+    font-family: 'Dosis', sans-serif;
+    margin-right: 5%;
+}
+.contPregunta {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    width: 80%;
+    justify-content: left;
+    margin-bottom: -4%;
+}
+#preguntaC {
+    font-size: 22pt;
+    color: rgb(96, 2, 96);
+}
+#preguntaD {
+    font-size: 22pt;
+    color: rgb(96, 2, 96);
+}
+#textoArticulo {
+    text-align: left;
+}
+#linkSala {
+    text-decoration: none;
+    color: rgb(5, 5, 111);
+    font-size: 14pt;
+    font-weight: 600;
+    margin-right: 2%;
+}
+.precio {
+    background: rgb(96, 2, 96);
+    padding: 1.5%;
+    -webkit-border-radius: 80px;
+    -moz-border-radius: 80px;
+    -ms-border-radius: 80px;
+    -o-border-radius: 80px;
+    -webkit-border-radius: 50px;
+    border-radius: 80px;
+    font-size: 23px;
+    color: white;
+    width: max-content;
+}
+.contCompra {
+    width: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 0.5%;
+    margin: 2% 0 4% 0;
+}
+.contCompra:hover {
+    background-color:  rgb(145, 194, 46);
+}
+#imgticket {
+    width: 20%;
+    margin-right: 5%;
+}
+#linkCompra {
+    text-decoration: none;
+    color: rgb(5, 5, 111);
+    font-size: 15pt;
+    font-weight: 600;
+    margin-right: 1%;
+}
+#imgCerrar {
+    width: 50px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#imgCerrar:hover {
+    -webkit-filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.8));
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.8));
+}
+
+/*--------------------------------------ESTILOS PARA LA PÁGINA EVENTOS_HOY----------------------------------*/
+
+/* Estilos del contenedor principal */
+#main-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 2%;
+}
+
+/* Estilos del contenedor izquierdo */
+.contLeft {
+    width: 22%;
+    background-color: #DCDCDC;
+    padding-bottom: 2%;
+}
+
+/* Estilos del contenedor derecho */
+.contRight {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    width: 75%;
+    padding: 1% 5%;
+}
+
+/* Estilos del contenedor de cada fila de evento */
+.contRow {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: greenyellow;
+    margin-bottom: 2%;
+}
+
+/* Estilos de los diferentes elementos de información que se muestran */
+.imgEventoHoy {
+    width: 100%;
+}
+.contPreguntaT {
+    padding-left: 5%;
+}
+.preguntaT {
+    font-size: 22pt;
+    color: rgb(96, 2, 96);
+    font-family: 'Dosis', sans-serif;
+    margin-bottom: -5%;
+}
+.contDondeElmntsT {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+.textoArticuloT {
+    text-align: left;
+}
+#imgticket2 {
+    width: 25%;
+    margin: 0 -5% 0 12%;
+}
+#linkCompraT {
+    text-align: center;
+    text-decoration: none;
+    color: rgb(5, 5, 111);
+    font-size: 15pt;
+    font-weight: 600;
+}

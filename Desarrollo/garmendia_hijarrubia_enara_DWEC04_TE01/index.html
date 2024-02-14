@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KulturMusik</title>
+
+    <!-- Llamadas al script de jQuery, archivo css y google fonts--> 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="views/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header id="cab">
+        <h1>EVENTOS MUSICALES DEL 2024 en el PV</h1>
+
+        <!-- Usamos la entidad de carácter &lt para imprimir por pantalla el caracter '<' -->
+        <!-- Botón para ir a la página con los eventos de hoy -->
+        <button title='Ver los eventos de hoy' id="goToToday">VER LOS EVENTOS DE HOY &gt</button>
+    </header>
+    <nav>
+
+        <!-- Botones e input de navegación por las páginas -->
+        <div id="controles">
+            <div id="pageStatus"></div>
+            <div class="contBotonesNav">
+                <button id="previousPage"><img id="previousArrow" src="img/previous_arrow.png" alt="Flecha para atras"></button>
+                <button id="nextPage"><img id="nextArrow" src="img/next_arrow.png" alt="Flecha para adelante"></button>
+            </div>
+            <input title="goToPageInput" id="goToPageInput" type="text"/><button id="goToPageButton">IR A LA PÁGINA ></button>
+        </div>
+        <img id="mapa" src="img/EH_kolore.png" alt="mapa de EH coloreado">
+    </nav>
+
+    <!-- Contenedor principal, donde mostraremos el listado de eventos -->
+    <div id="data-container"></div>
+
+    <!-- Llamadas al script de js -->
+    <script src="model/script.js"></script>
+</body>
+</html>
+
